@@ -14,6 +14,7 @@ const TodoApp = () => {
 
 	const storeItem = (event) => {
 		event.preventDefault();
+		if (value === '') return;
 		dispatch({ type: 'ADD_TODO', payload: value });
 		setValue('');
 	};
